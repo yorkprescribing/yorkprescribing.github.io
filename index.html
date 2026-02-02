@@ -5,30 +5,101 @@
   <title>York Prescribing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 16px;
-      line-height: 1.6;
+   <style>
+  :root{
+    --bg: #f6f7fb;
+    --text: #111827;
+    --muted: #6b7280;
+    --card: #ffffff;
+    --border: rgba(17,24,39,0.08);
+    --shadow: 0 10px 25px rgba(17,24,39,0.08);
+    --radius: 16px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  .wrap{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 28px 16px 60px;
+  }
+
+  header {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 20px;
+    box-shadow: var(--shadow);
+    margin: 18px 0 22px;
+  }
+
+  header h1{
+    margin: 0 0 8px;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+  }
+
+  nav a {
+    display: inline-block;
+    margin-right: 12px;
+    margin-top: 6px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--text);
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.7);
+  }
+
+  nav a:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(17,24,39,0.08);
+  }
+
+  section {
+    margin-bottom: 18px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 18px;
+    box-shadow: var(--shadow);
+  }
+
+  h2{
+    margin: 0 0 10px;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+  }
+
+  p { margin: 0 0 12px; color: var(--text); }
+  p:last-child { margin-bottom: 0; }
+
+  ul { margin: 0; padding-left: 18px; }
+  li { margin: 6px 0; color: var(--text); }
+
+  .muted{ color: var(--muted); font-size: 14px; }
+
+  @media (min-width: 760px){
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
     }
-    header {
-      border-bottom: 1px solid #ddd;
-      margin-bottom: 24px;
-    }
-    nav a {
-      margin-right: 16px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      margin-bottom: 32px;
-    }
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      padding: 20px;
-    }
+  }
+</style>
+
   </style>
 </head>
 <body>
